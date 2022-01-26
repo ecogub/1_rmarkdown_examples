@@ -1,8 +1,8 @@
 ---
 title: "Discharge Data Example"
 author: "Nick Gubbins"
-date: "1/24/2022"
-output:
+date: "`r Sys.Date()`"
+output: 
   html_document:
     toc: true
     toc_float: true
@@ -18,6 +18,7 @@ library(tidyverse)
 library(dataRetrieval)
 library(dygraphs)
 library(xts)
+library(revealjs)
 ```
 
 
@@ -120,7 +121,7 @@ todays date, not just a static date you enter.
 
 
 
-## DyGraph example. 
+### DyGraph example. 
 
 ```{r}
 
@@ -131,7 +132,8 @@ dygraph(q_xts) %>%
 ```
 
 
-## Poudre Paragraph
+### Poudre Paragraph
 
-**The Poudre River has a USGS gauge located in Fort Collins, Colorado.** The gauge's National Water Information System number is 0672260 and its' name is 'Cache la Poudre River at Fort Collins, CO'.  As an interesting aside, the USGS has precise language for when a gauge (which they spell *gage*) is 'at', 'near', or 'outside' a given municipality. 
+**The [Poudre River](https://en.wikipedia.org/wiki/Cache_la_Poudre_River) has a USGS gauge located in Fort Collins, Colorado.** The gauge's National Water Information System number is [0672260](https://waterdata.usgs.gov/nwis/wys_rpt/?site_no=06752260&agency_cd=USGS) and its' name is 'Cache la Poudre River at Fort Collins, CO'.  As an interesting aside, the USGS has precise language for when a gauge (which they spell *gage*) is 'at', 'near', or 'outside' a given municipality. The Poudre river has a [watershed area of 1127 square miles](https://streamstatsags.cr.usgs.gov/gagePages/html/06752260.html) and has a mean annual flow of 171 cfs. **This makes the Poudre a relatively small stream compared to many in the USGS network.**
 
+See this page as a report [here](./index_talk.html).
